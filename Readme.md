@@ -12,13 +12,17 @@ Built as a project for [roadmap.sh](https://roadmap.sh/projects/github-user-acti
 - Handles users with no recent public activity
 - No external dependencies — pure Node.js `fetch`
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or later (needed for the built-in `fetch` API)
+
 ## Installation
 
 Clone the repo and link it as a global command:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/ShubhangiMishra215/GitHub-User-Activity.git
+cd GitHub-User-Activity
 npm install
 npm link
 ```
@@ -53,3 +57,11 @@ Starred kamranahmedse/developer-roadmap
 
 - Node.js (built-in `fetch`, `process.argv`)
 - GitHub REST API — [`/users/{username}/events`](https://docs.github.com/en/rest/activity/events)
+
+## Notes
+
+- The GitHub REST API is unauthenticated by default in this project, so requests are subject to GitHub's [rate limits for unauthenticated requests](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) (60 requests/hour per IP). If you hit this limit frequently, consider adding a personal access token.
+
+## License
+
+This project is for personal learning purposes.
